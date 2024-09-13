@@ -35,10 +35,16 @@ const Navbar = () => {
                         className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
                         <li><a>{t("Home")}</a></li>
                         <li>
-                        <a>{t("Categorie")}</a>
+                        <a>{t("Categories")}</a>
                         <ul className="p-2">
-                            <li><a>Submenu 1</a></li>
-                            <li><a>Submenu 2</a></li>
+                            <li><a>{t("Sports")}</a></li>
+                            <li><a>{t("Business")}</a></li>
+                            <li><a>{t("Entertainment")}</a></li>
+                            <li><a>{t("LifeandLiving")}</a></li>
+                            <li><a>{t("Youth")}</a></li>
+                            <li><a>{t("Youth")}</a></li>
+                            <li><a>{t("Multimedia")}</a></li>
+                            <li><a>{t("Politics")}</a></li>
                         </ul>
                         </li>
                         <li><a>{t("LatestNews")}</a></li>
@@ -55,8 +61,14 @@ const Navbar = () => {
                         <details>
                         <summary>{t("Categories")}</summary>
                         <ul className="p-2">
-                            <li><a>Submenu 1</a></li>
-                            <li><a>Submenu 2</a></li>
+                            <li><a>{t("Sports")}</a></li>
+                            <li><a>{t("Business")}</a></li>
+                            <li><a>{t("Entertainment")}</a></li>
+                            <li><a>{t("LifeandLiving")}</a></li>
+                            <li><a>{t("Youth")}</a></li>
+                            <li><a>{t("Tech")}</a></li>
+                            <li><a>{t("Multimedia")}</a></li>
+                            <li><a>{t("Politics")}</a></li>
                         </ul>
                         </details>
                     </li>

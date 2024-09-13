@@ -4,6 +4,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Navbar from './components/Navbar';
 import SideNavbar from './components/SideNavbar';
+import Footer from './components/Footer';
 const Root = () => {
     return (
         <div className="w-full">  
@@ -19,6 +20,7 @@ const Root = () => {
                 <Outlet />
             </div>
             </div>
+            <Footer></Footer>
            <ToastContainer position="top-center" />
            
         </div>
