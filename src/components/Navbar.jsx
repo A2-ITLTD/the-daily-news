@@ -1,6 +1,7 @@
 import { changeLanguage } from "i18next";
 import { useTranslation } from "react-i18next";
 import Langselector from "./Langselector";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
 
@@ -33,7 +34,7 @@ const Navbar = () => {
                     <ul
                         tabIndex={0}
                         className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-                        <li><a>{t("Home")}</a></li>
+                        <li><Link to="/"><a>{t("Home")}</a></Link></li>
                         <li>
                         <a>{t("Categories")}</a>
                         <ul className="p-2">
@@ -47,16 +48,16 @@ const Navbar = () => {
                             <li><a>{t("Politics")}</a></li>
                         </ul>
                         </li>
-                        <li><a>{t("LatestNews")}</a></li>
+                        <li><Link to="/latestnews"><a>{t("LatestNews")}</a></Link></li>
                         <li><a>{t("BreakingNews")}</a></li>
-                        <li><a>{t("Contact")}</a></li>
+                        <li><Link to="/contact"><a>{t("Contact")}</a></Link></li>
                     </ul>
                     </div>
                     <a className="btn btn-ghost text-xl">{t("websitename")}</a>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1 text-xl">
-                    <li><a>{t("Home")}</a></li>
+                    <li><Link to="/"><a>{t("Home")}</a></Link></li>
                     <li>
                         <details>
                         <summary>{t("Categories")}</summary>
@@ -72,9 +73,9 @@ const Navbar = () => {
                         </ul>
                         </details>
                     </li>
-                    <li><a>{t("LatestNews")}</a></li>
+                    <li><Link to="/latestnews"><a>{t("LatestNews")}</a></Link></li>
                     <li><a>{t("BreakingNews")}</a></li>
-                    <li><a>{t("Contact")}</a></li>
+                    <li><Link to="/contact"><a>{t("Contact")}</a></Link></li>
                     </ul>
                 </div>
                 <div className="navbar-end">
