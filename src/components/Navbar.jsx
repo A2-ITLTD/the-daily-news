@@ -49,13 +49,13 @@ const Navbar = () => {
                         </ul>
                         </li>
                         <li><Link to="/latestnews"><a>{t("LatestNews")}</a></Link></li>
-                        <li><a>{t("BreakingNews")}</a></li>
+                        <li><Link to="/breakingnews"><a>{t("BreakingNews")}</a></Link></li>
                         <li><Link to="/contact"><a>{t("Contact")}</a></Link></li>
                     </ul>
                     </div>
                     <a className="btn btn-ghost text-xl">{t("websitename")}</a>
                 </div>
-                <div className="navbar-center hidden lg:flex">
+                <div className="navbar-center hidden lg:flex z-50">
                     <ul className="menu menu-horizontal px-1 text-xl">
                     <li><Link to="/"><a>{t("Home")}</a></Link></li>
                     <li>
@@ -74,13 +74,19 @@ const Navbar = () => {
                         </details>
                     </li>
                     <li><Link to="/latestnews"><a>{t("LatestNews")}</a></Link></li>
-                    <li><a>{t("BreakingNews")}</a></li>
+                    <li><Link to="/breakingnews"><a>{t("BreakingNews")}</a></Link></li>
                     <li><Link to="/contact"><a>{t("Contact")}</a></Link></li>
                     </ul>
                 </div>
                 <div className="navbar-end">
                     <Langselector></Langselector>
                 </div>
+            </div>
+            {/* headline */}
+            <div className="text-xl font-semibold py-4 bg-base-300">
+                <marquee behavior="" direction="left">
+                    {t("headline")}
+                </marquee>
             </div>
         </div>
     );

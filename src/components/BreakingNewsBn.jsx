@@ -3,16 +3,15 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
-const LatestNewsBn = () => {
-
+const BreakingNewsBn = () => {
     const {t} = useTranslation();
     const [news, setNews] = useState([]);
 
     useEffect(() => {
-        
+        // Fetching the news from the Express server on localhost:5000
         const fetchNews = async () => {
             try {
-                const response = await axios.get('http://localhost:5000/latestnewsbn');
+                const response = await axios.get('http://localhost:5000/breakingnewsbn');
                 setNews(response.data); 
             } catch (error) {
                 console.error("Error fetching the news:", error);
@@ -25,10 +24,10 @@ const LatestNewsBn = () => {
     return (
         <div>
             <div className="flex justify-between items-center">
-                <h1 className="text-4xl font-semibold">{t("LatestNews")}</h1>
+                <h1 className="text-4xl font-semibold">{t("BreakingNews")}</h1>
                 <div className="flex gap-5">
-                    <Link to="/latestnews"><button className="btn btn-ghost">English</button></Link>
-                    <Link to="/latestnewsbn"><button className="btn btn-ghost">Bangla</button></Link>
+                    <Link to="/breakingnews"><button className="btn btn-ghost">English</button></Link>
+                    <Link to="/breakingnewsbn"><button className="btn btn-ghost">Bangla</button></Link>
                 </div>
             </div>
             <div className="flex flex-wrap justify-center gap-6">
@@ -57,9 +56,9 @@ const LatestNewsBn = () => {
                         {/* Date and Read Full Button */}
                         <div className="flex justify-between items-center">
                             <span className="text-gray-600 text-sm">{item.date}</span>
-                            <Link to={`/details2/${item._id}`}>
+                            <Link to={`/details4/${item._id}`}>
                             <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded transition-colors">
-                                {t("ReadFullNews")}
+                            {t("ReadFullNews")}
                             </button>
                             </Link>
                         </div>
@@ -72,4 +71,4 @@ const LatestNewsBn = () => {
     );
 };
 
-export default LatestNewsBn;
+export default BreakingNewsBn;

@@ -126,16 +126,23 @@ const SideNavbar = () => {
             </div>
             </div>
             {/* news letter */}
-            <div className="my-16 bg-blue-500 p-6 flex flex-col gap-5 items-start">
-                <h1 className="btn btn-ghost text-3xl font-semibold text-white text-left">{t("Newsletter")}</h1> 
+            <div className="my-16 bg-blue-500 p-6 flex flex-col gap-5 items-start max-w-full">
+                <h1 className="text-3xl font-semibold text-white">{t("Newsletter")}</h1>
                 <p className="text-base text-white">{t("Newslettertext")}</p>
-                <form action="">
-                    <label className="input input-bordered flex items-center gap-2">
-                    <input type="text" className="grow" placeholder="Email" />
-                    <button className="bg-slate-300 rounded-md px-3 py-2">{t("Send")}</button>
-                    </label>
+                <form action="" className="w-full flex flex-col sm:flex-row gap-2">
+                    <input
+                        type="text"
+                        className="w-full px-3 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400"
+                        placeholder="Email"
+                    />
+                    <button
+                        className="bg-slate-300 rounded-md px-3 py-2 mt-2 sm:mt-0 sm:ml-2"
+                    >
+                        {t("Send")}
+                    </button>
                 </form>
             </div>
+
             {/* categories */}
             <div  className="my-16 flex flex-col gap-5 items-start">
                 <h1 className="btn btn-ghost text-3xl font-semibold text-left">{t("Categories")}</h1> 

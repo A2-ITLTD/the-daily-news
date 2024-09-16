@@ -56,9 +56,11 @@ const LatestNewsEn = () => {
                         {/* Date and Read Full Button */}
                         <div className="flex justify-between items-center">
                             <span className="text-gray-600 text-sm">{item.date}</span>
+                            <Link to={`/details/${item._id}`}>
                             <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded transition-colors">
-                                Read Full News
+                             {t("ReadFullNews")}
                             </button>
+                            </Link>
                         </div>
                     </div>
                 </div>

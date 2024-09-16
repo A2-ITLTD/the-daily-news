@@ -31,6 +31,7 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
                 Politics: "Politics",
                 News: "News",
                 Social: "Social",
+                ReadFullNews: "Read Full News",
                 Copyrighttext: "All right reserved by The Daily News",
                 sn1title: "Passenger numbers plummet on Bangladesh-India routes following Aug 5",
                 sn2title: "Hasina 'destroyed' Bangladesh's institutions: Yunus",
@@ -62,6 +63,7 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
                 n13title: "Calm before derby storm for Inter as dark fan underbelly revealed", 
                 n14title: "An alarming brain drain crisis / Why are Bangladesh's brightest engineering minds leaving?",
                 n14shortdes: "Every once in a while, the term brain drain pops up in discussions to dissect the migration of so many Bangladeshi students to foreign countries. Although the migration takes place in pursuit of higher studies, most of these students have no intention to return to the country.", 
+                headline: "Global Leaders Meet to Discuss Climate Action. Major Tech Company Announces Revolutionary AI.  World Health Organization Issues New Pandemic Guidelines.  Historic Peace Agreement Signed Between Two Rival Nations.  Stock Markets Surge Amid Economic Optimism.  Breakthrough in Cancer Research Promises New Treatment.  International Travel Restrictions Eased Globally.  New Electric Vehicle Dominates Auto Market. Global Warming Reaches New High.  Urgent Action Needed.  Groundbreaking Space Mission Announced for Next Year",
             },
         },
         bn : {
@@ -90,6 +92,7 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
                 News: "সংবাদ",
                 Social: "সামাজিক যোগাযোগ মাধ্যম",
                 Copyrighttext: "সর্বস্বত্ব সংরক্ষিত দৈনিক পত্রিকা দ্বারা",
+                ReadFullNews: "সম্পূর্ণ সংবাদ পড়ুন",
                 sn1title: "৫ আগস্টের পর বাংলাদেশ-ভারত রুটে যাত্রীর সংখ্যা কমেছে",
                 sn2title: "বাংলাদেশের প্রতিষ্ঠানগুলো ধ্বংস করেছেন হাসিনা: ইউনূস",
                 sn3title: "ওয়ার্নারের শূন্যস্থান পূরণের জন্য শর্ট তৈরি",
@@ -119,8 +122,8 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
                 n12title: "ইয়ামাল বার্সেলোনার 'লিজেন্ড' হতে চান",
                 n13title: "ইন্টার ডার্বির আগে শান্ত পরিবেশ, ফ্যানদের অন্ধকার দিক উন্মোচিত",
                 n14title: "উদ্বেগজনক ব্রেন ড্রেন সংকট / কেন বাংলাদেশের সেরা প্রকৌশলী মেধাবীরা দেশ ছেড়ে চলে যাচ্ছেন?",
-                n14shortdes: "প্রতি সময়ে সময়ে ব্রেন ড্রেন শব্দটি উঠে আসে, যখন বাংলাদেশি শিক্ষার্থীদের বিদেশে যাওয়ার আলোচনা হয়। যদিও এই অভিবাসন উচ্চশিক্ষার জন্য হয়, বেশিরভাগ শিক্ষার্থীরই দেশে ফিরে আসার কোনো ইচ্ছা থাকে না।"
-
+                n14shortdes: "প্রতি সময়ে সময়ে ব্রেন ড্রেন শব্দটি উঠে আসে, যখন বাংলাদেশি শিক্ষার্থীদের বিদেশে যাওয়ার আলোচনা হয়। যদিও এই অভিবাসন উচ্চশিক্ষার জন্য হয়, বেশিরভাগ শিক্ষার্থীরই দেশে ফিরে আসার কোনো ইচ্ছা থাকে না।",
+                headline : "বিশ্বনেতারা জলবায়ু পদক্ষেপ নিয়ে আলোচনা করতে বৈঠক করেছেন, একটি প্রধান প্রযুক্তি কোম্পানি বিপ্লবী AI ঘোষণা করেছে, বিশ্ব স্বাস্থ্য সংস্থা নতুন মহামারি নির্দেশিকা জারি করেছে, দুটি প্রতিদ্বন্দ্বী দেশের মধ্যে ঐতিহাসিক শান্তি চুক্তি স্বাক্ষরিত হয়েছে, অর্থনৈতিক আশাবাদের মাঝে শেয়ার বাজার উত্থিত হয়েছে, ক্যান্সার গবেষণায় নতুন চিকিৎসার প্রতিশ্রুতি, আন্তর্জাতিক ভ্রমণ নিষেধাজ্ঞা বিশ্বব্যাপী শিথিল করা হয়েছে, নতুন বৈদ্যুতিক গাড়ি অটো বাজার দখল করেছে, বৈশ্বিক উষ্ণতা নতুন উচ্চতায় পৌঁছেছে, জরুরি পদক্ষেপ প্রয়োজন, পরবর্তী বছরের জন্য একটি যুগান্তকারী মহাকাশ মিশনের ঘোষণা",
             },
         }
     }
