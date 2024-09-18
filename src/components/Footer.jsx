@@ -7,6 +7,7 @@ import twitter from "../Images/twitter.png";
 import youtube from "../Images/youtube.png";
 import linkedin from "../Images/linkedin.png";
 import pinterest from "../Images/pinterest.png";
+import { Link } from "react-router-dom";
 const Footer = () => {
 
     const {t} = useTranslation();
@@ -16,20 +17,20 @@ const Footer = () => {
             <footer className="footer bg-gray-800 py-10 px-4 md:px-24 text-white text-xl">
                 <nav>
                     <h6 className="footer-title">{t("Categories")}</h6>
-                    <a className="link link-hover">{t("Sports")}</a>
-                    <a className="link link-hover">{t("Business")}</a>
-                    <a className="link link-hover">{t("Entertainment")}</a>
-                    <a className="link link-hover">{t("LifeandLiving")}</a>
-                    <a className="link link-hover">{t("Youth")}</a>
-                    <a className="link link-hover">{t("Youth")}</a>
-                    <a className="link link-hover">{t("Multimedia")}</a>
-                    <a className="link link-hover">{t("Politics")}</a>
+                    <Link to={`/category/${t("Sports")}`} className="link link-hover">{t("Sports")}</Link>
+                    <Link to={`/category/${t("Business")}`} className="link link-hover">{t("Business")}</Link>
+                    <Link to={`/category/${t("Entertainment")}`} className="link link-hover">{t("Entertainment")}</Link>
+                    <Link to={`/category/${t("LifeandLiving")}`} className="link link-hover">{t("LifeandLiving")}</Link>
+                    <Link to={`/category/${t("Youth")}`} className="link link-hover">{t("Youth")}</Link>
+                    <Link to={`/category/${t("Tech")}`} className="link link-hover">{t("Youth")}</Link>
+                    <Link to={`/category/${t("Multimedia")}`} className="link link-hover">{t("Multimedia")}</Link>
+                    <Link Link to={`/category/${t("Politics")}`} className="link link-hover">{t("Politics")}</Link>
                 </nav>
                 <nav>
                     <h6 className="footer-title">{t("News")}</h6>
-                    <a className="link link-hover">{t("LatestNews")}</a>
-                    <a className="link link-hover">{t("BreakingNews")}</a>
-                    <a className="link link-hover">{t("Contact")}</a>
+                    <Link to="/latestnews" className="link link-hover">{t("LatestNews")}</Link>
+                    <Link  to="/breakingnews" className="link link-hover">{t("BreakingNews")}</Link>
+                    <Link  to="/contact" className="link link-hover">{t("Contact")}</Link>
                     
                 </nav>
                 <nav>

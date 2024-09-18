@@ -20,6 +20,8 @@ import twitter from "../Images/twitter.png";
 import youtube from "../Images/youtube.png";
 import linkedin from "../Images/linkedin.png";
 import pinterest from "../Images/pinterest.png";
+import { Link } from "react-router-dom";
+import SquareAd from "./SquareAd";
 const SideNavbar = () => {
     const {t} = useTranslation();
     return (
@@ -66,6 +68,10 @@ const SideNavbar = () => {
                     <h1 className="text-black font-bold">{t("sn5title")}</h1>
                 </div>
             </div>
+            </div>
+            {/* add 1 */}
+            <div>
+                <SquareAd></SquareAd>
             </div>
             {/* follow us */}
             <div className="my-16 flex flex-col justify-end gap-3 bg-base-200 p-5">
@@ -147,14 +153,14 @@ const SideNavbar = () => {
             <div  className="my-16 flex flex-col gap-5 items-start">
                 <h1 className="btn btn-ghost text-3xl font-semibold text-left">{t("Categories")}</h1> 
                 <div className="flex flex-col gap-3 w-full">
-                    <h1 className="flex items-center gap-4 bg-gray-200 w-auto p-4 text-xl font-semibold"><LuNewspaper /> {t("Sports")}</h1>
-                    <h1 className="flex items-center gap-4 bg-gray-200 w-auto p-4 text-xl font-semibold"><LuNewspaper /> {t("Business")}</h1>
-                    <h1 className="flex items-center gap-4 bg-gray-200 w-auto p-4 text-xl font-semibold"><LuNewspaper /> {t("Entertainment")}</h1>
-                    <h1 className="flex items-center gap-4 bg-gray-200 w-auto p-4 text-xl font-semibold"><LuNewspaper /> {t("LifeandLiving")}</h1>
-                    <h1 className="flex items-center gap-4 bg-gray-200 w-auto p-4 text-xl font-semibold"><LuNewspaper /> {t("Youth")}</h1>
-                    <h1 className="flex items-center gap-4 bg-gray-200 w-auto p-4 text-xl font-semibold"><LuNewspaper /> {t("Tech")}</h1>
-                    <h1 className="flex items-center gap-4 bg-gray-200 w-auto p-4 text-xl font-semibold"><LuNewspaper /> {t("Multimedia")}</h1>
-                    <h1 className="flex items-center gap-4 bg-gray-200 w-auto p-4 text-xl font-semibold"><LuNewspaper /> {t("Politics")}</h1>
+                    <Link to={`/category/${t("Sports")}`}><h1 className="flex items-center gap-4 bg-gray-200 w-auto p-4 text-xl font-semibold"><LuNewspaper /> {t("Sports")}</h1></Link>
+                    <Link to={`/category/${t("Business")}`}><h1 className="flex items-center gap-4 bg-gray-200 w-auto p-4 text-xl font-semibold"><LuNewspaper /> {t("Business")}</h1></Link>
+                    <Link to={`/category/${t("Entertainment")}`}><h1 className="flex items-center gap-4 bg-gray-200 w-auto p-4 text-xl font-semibold"><LuNewspaper /> {t("Entertainment")}</h1></Link>
+                    <Link to={`/category/${t("LifeandLiving")}`}><h1 className="flex items-center gap-4 bg-gray-200 w-auto p-4 text-xl font-semibold"><LuNewspaper /> {t("LifeandLiving")}</h1></Link>
+                    <Link to={`/category/${t("Youth")}`}><h1 className="flex items-center gap-4 bg-gray-200 w-auto p-4 text-xl font-semibold"><LuNewspaper /> {t("Youth")}</h1></Link>
+                    <Link to={`/category/${t("Tech")}`}><h1 className="flex items-center gap-4 bg-gray-200 w-auto p-4 text-xl font-semibold"><LuNewspaper /> {t("Tech")}</h1></Link>
+                    <Link to={`/category/${t("Multimedia")}`}><h1 className="flex items-center gap-4 bg-gray-200 w-auto p-4 text-xl font-semibold"><LuNewspaper /> {t("Multimedia")}</h1></Link>
+                    <Link to={`/category/${t("Politics")}`}><h1 className="flex items-center gap-4 bg-gray-200 w-auto p-4 text-xl font-semibold"><LuNewspaper /> {t("Politics")}</h1></Link>
                 </div>
             </div>
         </div>

@@ -22,7 +22,6 @@ const Root = () => {
             </div>
             <Footer></Footer>
            <ToastContainer position="top-center" />
-           
         </div>
     );
 };

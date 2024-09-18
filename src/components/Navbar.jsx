@@ -1,17 +1,37 @@
+import { useContext, useState } from "react";
+import { AuthContext } from "./AuthProvider";
 import { changeLanguage } from "i18next";
 import { useTranslation } from "react-i18next";
 import Langselector from "./Langselector";
 import { Link } from "react-router-dom";
-
+import logo from "../Images/logo.png"
+import { IoPersonSharp } from "react-icons/io5";
+import { IoIosLogOut } from "react-icons/io";
 const Navbar = () => {
 
     const {t} = useTranslation();
+    const [arrow, setArrow] = useState(true);
+    const { user, logOut, loading } = useContext(AuthContext);
+
+    if (loading) {
+        return <span className="loading loading-spinner loading-lg"></span>
+    }
+
+    const handleLogout = () => {
+        logOut()
+        .then(() => {
+            toast.success("Logout successful");
+          })
+        .catch(error => {
+            toast.error(error.message);
+          });
+    };
 
     return (
         <div >  
             {/* 1st navbar */}
            <div className="navbar flex flex-col justify-center bg-base-100 py-5">
-                <a className="btn btn-ghost text-5xl font-bold">{t("websitename")}</a>
+                <img src={logo} className="w-auto h-20" />
             </div>
             {/* 2nd navbar */}
             <div className="navbar bg-transparent border-[1px] border-gray-500 px-5 md:px-24">
@@ -34,7 +54,7 @@ const Navbar = () => {
                     <ul
                         tabIndex={0}
                         className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-                        <li><Link to="/"><a>{t("Home")}</a></Link></li>
+                        <li><Link to="/">{t("Home")}</Link></li>
                         <li>
                         <a>{t("Categories")}</a>
                         <ul className="p-2">
@@ -48,34 +68,55 @@ const Navbar = () => {
                             <li><a>{t("Politics")}</a></li>
                         </ul>
                         </li>
-                        <li><Link to="/latestnews"><a>{t("LatestNews")}</a></Link></li>
-                        <li><Link to="/breakingnews"><a>{t("BreakingNews")}</a></Link></li>
-                        <li><Link to="/contact"><a>{t("Contact")}</a></Link></li>
+                        <li><Link to="/latestnews">{t("LatestNews")}</Link></li>
+                        <li><Link to="/breakingnews">{t("BreakingNews")}</Link></li>
+                        <li><Link to="/contact">{t("Contact")}</Link></li>
                     </ul>
                     </div>
-                    <a className="btn btn-ghost text-xl">{t("websitename")}</a>
+                    {/* <a className="btn btn-ghost text-xl">{t("websitename")}</a> */}
+                     {/* Admin Login */}
+                    {
+                    user ? (
+                        user.email === "admin@gmail.com" ? (
+                            // If user is logged in and is an admin
+                            <div className=" font-normal text-xs md:text-base flex justify-center md:justify-end gap-5 md:gap-10">
+                                <Link to="/adminpanel" className="flex gap-2 items-center btn btn-ghost"><IoPersonSharp />Admin Panel</Link>
+                                {/* Additional options for admin can be added here */}
+                                
+                                <p onClick={handleLogout} className="flex gap-2 items-center btn btn-ghost"><IoIosLogOut />Logout</p>
+                            </div>
+                        ) : (
+                            <div>You must be an admin to access this option</div>
+                        )
+                    ) : (
+                        // If user is not logged in
+                        <div className="text-xs md:text-3xl">
+                            <Link to="/Login" className="btn btn-ghost">{t("Login")}</Link>
+                        </div>
+                    )
+                }
                 </div>
                 <div className="navbar-center hidden lg:flex z-50">
                     <ul className="menu menu-horizontal px-1 text-xl">
-                    <li><Link to="/"><a>{t("Home")}</a></Link></li>
+                    <li><Link to="/">{t("Home")}</Link></li>
                     <li>
                         <details>
                         <summary>{t("Categories")}</summary>
                         <ul className="p-2">
-                            <li><a>{t("Sports")}</a></li>
-                            <li><a>{t("Business")}</a></li>
-                            <li><a>{t("Entertainment")}</a></li>
-                            <li><a>{t("LifeandLiving")}</a></li>
-                            <li><a>{t("Youth")}</a></li>
-                            <li><a>{t("Tech")}</a></li>
-                            <li><a>{t("Multimedia")}</a></li>
-                            <li><a>{t("Politics")}</a></li>
+                            <li><Link to={`/category/${t("Sports")}`}>{t("Sports")}</Link></li>
+                            <li><Link to={`/category/${t("Business")}`}>{t("Business")}</Link></li>
+                            <li><Link to={`/category/${t("Entertainment")}`}>{t("Entertainment")}</Link></li>
+                            <li><Link to={`/category/${t("LifeandLiving")}`}>{t("LifeandLiving")}</Link></li>
+                            <li><Link to={`/category/${t("Youth")}`}>{t("Youth")}</Link></li>
+                            <li><Link to={`/category/${t("Tech")}`}>{t("Tech")}</Link></li>
+                            <li><Link to={`/category/${t("Multimedia")}`}>{t("Multimedia")}</Link></li>
+                            <li><Link to={`/category/${t("Politics")}`}>{t("Politics")}</Link></li>
                         </ul>
                         </details>
                     </li>
-                    <li><Link to="/latestnews"><a>{t("LatestNews")}</a></Link></li>
-                    <li><Link to="/breakingnews"><a>{t("BreakingNews")}</a></Link></li>
-                    <li><Link to="/contact"><a>{t("Contact")}</a></Link></li>
+                    <li><Link to="/latestnews">{t("LatestNews")}</Link></li>
+                    <li><Link to="/breakingnews">{t("BreakingNews")}</Link></li>
+                    <li><Link to="/contact">{t("Contact")}</Link></li>
                     </ul>
                 </div>
                 <div className="navbar-end">
@@ -83,10 +124,15 @@ const Navbar = () => {
                 </div>
             </div>
             {/* headline */}
-            <div className="text-xl font-semibold py-4 bg-base-300">
-                <marquee behavior="" direction="left">
-                    {t("headline")}
-                </marquee>
+            <div className="text-xl font-semibold flex items-center">
+                <div className="py-5 px-8 w-4/12 text-white bg-green-500">
+                    <p>{t("headlines")}</p>
+                </div>
+                <div className="py-4 bg-base-300">
+                    <marquee behavior="" direction="left">
+                        {t("headline")}
+                    </marquee>
+                </div>
             </div>
         </div>
     );
