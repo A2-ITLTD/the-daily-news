@@ -15,9 +15,9 @@ const BreakingNewsPanel = () => {
         // Fetching the news from the Express server on localhost:5000
         const fetchNews = async () => {
             try {
-                const response = await axios.get('http://localhost:5000/breakingnewsen');
+                const response = await axios.get('https://news-server-lilac.vercel.app/breakingnewsen');
                 setNewsEn(response.data); 
-                const response2 = await axios.get('http://localhost:5000/breakingnewsbn');
+                const response2 = await axios.get('https://news-server-lilac.vercel.app/breakingnewsbn');
                 setNewsBn(response2.data);
             } catch (error) {
                 console.error("Error fetching the news:", error);
@@ -30,7 +30,7 @@ const BreakingNewsPanel = () => {
     const handleDeleteEn = async (_id) => {
         try {
 
-            const response = await axios.delete(`http://localhost:5000/breakingnewsen/delete/${_id}`);
+            const response = await axios.delete(`https://news-server-lilac.vercel.app/breakingnewsen/delete/${_id}`);
             if (response.data && response.data.deletedCount === 1) {
                 toast.success('Deleted successfully');
                 const updatedNewsItems = newsen.filter(item => item._id !== _id);
@@ -46,7 +46,7 @@ const BreakingNewsPanel = () => {
     const handleDeleteBn = async (_id) => {
         try {
 
-            const response = await axios.delete(`http://localhost:5000/breakingnewsbn/delete/${_id}`);
+            const response = await axios.delete(`https://news-server-lilac.vercel.app/breakingnewsbn/delete/${_id}`);
             if (response.data && response.data.deletedCount === 1) {
                 toast.success('Deleted successfully');
                 const updatedNewsItems2 = newsbn.filter(item => item._id !== _id);

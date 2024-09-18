@@ -10,7 +10,7 @@ const Details4 = () => {
         document.title = "Details";
         setLoading(true);
         // fetching data
-        axios.get(`http://localhost:5000/breakingnewsbn/id/${id}`)
+        axios.get(`https://news-server-lilac.vercel.app/breakingnewsbn/id/${id}`)
             .then(res => {
                 setNews(res.data);  // Set news if found in the first API
             })

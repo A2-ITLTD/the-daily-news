@@ -65,7 +65,7 @@ const AddNews = () => {
             };
 
             // Now post the formData with the uploaded image URL
-            await axios.post('http://localhost:5000/latestnewsen', finalFormData)
+            await axios.post('https://news-server-lilac.vercel.app/latestnewsen', finalFormData)
                 .then(response => {
                     if (response.data.insertedId) {
                         // Reset the form and show success message

@@ -15,7 +15,7 @@ const CategoryNewsEn = () => {
         setLoading(true);
         
         // Fetching data by category
-        axios.get(`http://localhost:5000/category/${category}`)
+        axios.get(`https://news-server-lilac.vercel.app/category/${category}`)
             .then(res => {
                 setNews(res.data);  
                 setLoading(false);   

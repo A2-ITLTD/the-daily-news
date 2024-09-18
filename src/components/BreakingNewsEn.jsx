@@ -11,7 +11,7 @@ const BreakingNewsEn = () => {
         // Fetching the news from the Express server on localhost:5000
         const fetchNews = async () => {
             try {
-                const response = await axios.get('http://localhost:5000/breakingnewsen');
+                const response = await axios.get('https://news-server-lilac.vercel.app/breakingnewsen');
                 setNews(response.data); 
             } catch (error) {
                 console.error("Error fetching the news:", error);

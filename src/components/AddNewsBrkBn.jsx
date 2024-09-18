@@ -64,7 +64,7 @@ const AddNewsBrkBn = () => {
             };
 
             // Now post the formData with the uploaded image URL
-            await axios.post('http://localhost:5000/breakingnewsbn', finalFormData)
+            await axios.post('https://news-server-lilac.vercel.app/breakingnewsbn', finalFormData)
                 .then(response => {
                     if (response.data.insertedId) {
                         // Reset the form and show success message
