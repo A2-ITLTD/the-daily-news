@@ -32,7 +32,7 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
                 News: "News",
                 Social: "Social",
                 ReadFullNews: "Read Full News",
-                headlines: "Breaking-News",
+                headlines: "Breaking News",
                 Login: "Login",
                 LoginText: "This Login is for admin only. Admin can access reserve functions",
                 Email:  "Email",

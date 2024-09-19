@@ -29,49 +29,49 @@ const SideNavbar = () => {
             <div className="flex flex-col justify-end gap-3"> 
                 <h1 className="btn btn-ghost w-fit text-2xl font-semibold">{t("LatestNews")}</h1> 
                 {/* news 1 */}
-            <div className="flex items-center gap-5 bg-base-200 p-3">
-                <img src={sn1} className="w-18 h-16 object-cover object-center" />
-                <div className="flex flex-col gap-1 items-start">
-                    <p className="text-sm font-semibold text-blue-500">Date: 12 Sep 2024</p>
-                    <h1 className="text-black font-bold">{t("sn1title")}</h1>
+                <div className="flex items-center gap-5 bg-base-200 p-3">
+                    <img src={sn1} className="w-18 h-16 object-cover object-center" />
+                    <div className="flex flex-col gap-1 items-start">
+                        <p className="text-sm font-semibold text-blue-500">Date: 12 Sep 2024</p>
+                        <h1 className="text-black font-bold">{t("sn1title")}</h1>
+                    </div>
                 </div>
-            </div>
-            {/* news 2 */}
-            <div className="flex items-center gap-5 bg-base-200 p-3">
-                <img src={sn2} className="w-18 h-16 object-cover object-center" />
-                <div className="flex flex-col gap-1 items-start">
-                    <p className="text-sm font-semibold text-blue-500">Date: 12 Sep 2024</p>
-                    <h1 className="text-black font-bold">{t("sn2title")}</h1>
+                {/* news 2 */}
+                <div className="flex items-center gap-5 bg-base-200 p-3">
+                    <img src={sn2} className="w-18 h-16 object-cover object-center" />
+                    <div className="flex flex-col gap-1 items-start">
+                        <p className="text-sm font-semibold text-blue-500">Date: 12 Sep 2024</p>
+                        <h1 className="text-black font-bold">{t("sn2title")}</h1>
+                    </div>
                 </div>
-            </div>
-            {/* news 3 */}
-            <div className="flex items-center gap-5 bg-base-200 p-3">
-                <img src={sn3} className="w-18 h-16 object-cover object-center" />
-                <div className="flex flex-col gap-1 items-start">
-                    <p className="text-sm font-semibold text-blue-500">Date: 12 Sep 2024</p>
-                    <h1 className="text-black font-bold">{t("sn3title")}</h1>
+                {/* news 3 */}
+                <div className="flex items-center gap-5 bg-base-200 p-3">
+                    <img src={sn3} className="w-18 h-16 object-cover object-center" />
+                    <div className="flex flex-col gap-1 items-start">
+                        <p className="text-sm font-semibold text-blue-500">Date: 12 Sep 2024</p>
+                        <h1 className="text-black font-bold">{t("sn3title")}</h1>
+                    </div>
                 </div>
-            </div>
-            {/* news 4 */}
-            <div className="flex items-center gap-5 bg-base-200 p-3">
-                <img src={sn4} className="w-18 h-16 object-cover object-center" />
-                <div className="flex flex-col gap-1 items-start">
-                    <p className="text-sm font-semibold text-blue-500">Date: 12 Sep 2024</p>
-                    <h1 className="text-black font-bold">{t("sn4title")}</h1>
+                {/* news 4 */}
+                <div className="flex items-center gap-5 bg-base-200 p-3">
+                    <img src={sn4} className="w-18 h-16 object-cover object-center" />
+                    <div className="flex flex-col gap-1 items-start">
+                        <p className="text-sm font-semibold text-blue-500">Date: 12 Sep 2024</p>
+                        <h1 className="text-black font-bold">{t("sn4title")}</h1>
+                    </div>
                 </div>
-            </div>
-            {/* news 5 */}
-            <div className="flex items-center gap-5 bg-base-200 p-3">
-                <img src={sn5} className="w-18 h-16 object-cover object-center" />
-                <div className="flex flex-col gap-1 items-start">
-                    <p className="text-sm font-semibold text-blue-500">Date: 12 Sep 2024</p>
-                    <h1 className="text-black font-bold">{t("sn5title")}</h1>
+                {/* news 5 */}
+                <div className="flex items-center gap-5 bg-base-200 p-3">
+                    <img src={sn5} className="w-18 h-16 object-cover object-center" />
+                    <div className="flex flex-col gap-1 items-start">
+                        <p className="text-sm font-semibold text-blue-500">Date: 12 Sep 2024</p>
+                        <h1 className="text-black font-bold">{t("sn5title")}</h1>
+                    </div>
                 </div>
-            </div>
             </div>
             {/* add 1 */}
             <div>
-                <SquareAd></SquareAd>
+                {/* <SquareAd></SquareAd> */}
             </div>
             {/* follow us */}
             <div className="my-16 flex flex-col justify-end gap-3 bg-base-200 p-5">

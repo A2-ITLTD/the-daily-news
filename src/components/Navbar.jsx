@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 import logo from "../Images/logo.png"
 import { IoPersonSharp } from "react-icons/io5";
 import { IoIosLogOut } from "react-icons/io";
+import { LuAlertCircle } from "react-icons/lu";
 const Navbar = () => {
 
     const {t} = useTranslation();
@@ -58,14 +59,14 @@ const Navbar = () => {
                         <li>
                         <a>{t("Categories")}</a>
                         <ul className="p-2">
-                            <li><a>{t("Sports")}</a></li>
-                            <li><a>{t("Business")}</a></li>
-                            <li><a>{t("Entertainment")}</a></li>
-                            <li><a>{t("LifeandLiving")}</a></li>
-                            <li><a>{t("Youth")}</a></li>
-                            <li><a>{t("Youth")}</a></li>
-                            <li><a>{t("Multimedia")}</a></li>
-                            <li><a>{t("Politics")}</a></li>
+                            <li><Link to={`/category/${t("Sports")}`}>{t("Sports")}</Link></li>
+                            <li><Link to={`/category/${t("Business")}`}>{t("Business")}</Link></li>
+                            <li><Link to={`/category/${t("Entertainment")}`}>{t("Entertainment")}</Link></li>
+                            <li><Link to={`/category/${t("LifeandLiving")}`}>{t("LifeandLiving")}</Link></li>
+                            <li><Link to={`/category/${t("Youth")}`}>{t("Youth")}</Link></li>
+                            <li><Link to={`/category/${t("Tech")}`}>{t("Tech")}</Link></li>
+                            <li><Link to={`/category/${t("Multimedia")}`}>{t("Multimedia")}</Link></li>
+                            <li><Link to={`/category/${t("Politics")}`}>{t("Politics")}</Link></li>
                         </ul>
                         </li>
                         <li><Link to="/latestnews">{t("LatestNews")}</Link></li>
@@ -100,19 +101,19 @@ const Navbar = () => {
                     <ul className="menu menu-horizontal px-1 text-xl">
                     <li><Link to="/">{t("Home")}</Link></li>
                     <li>
-                        <details>
-                        <summary>{t("Categories")}</summary>
-                        <ul className="p-2">
-                            <li><Link to={`/category/${t("Sports")}`}>{t("Sports")}</Link></li>
-                            <li><Link to={`/category/${t("Business")}`}>{t("Business")}</Link></li>
-                            <li><Link to={`/category/${t("Entertainment")}`}>{t("Entertainment")}</Link></li>
-                            <li><Link to={`/category/${t("LifeandLiving")}`}>{t("LifeandLiving")}</Link></li>
-                            <li><Link to={`/category/${t("Youth")}`}>{t("Youth")}</Link></li>
-                            <li><Link to={`/category/${t("Tech")}`}>{t("Tech")}</Link></li>
-                            <li><Link to={`/category/${t("Multimedia")}`}>{t("Multimedia")}</Link></li>
-                            <li><Link to={`/category/${t("Politics")}`}>{t("Politics")}</Link></li>
-                        </ul>
-                        </details>
+                        <div className="dropdown dropdown-hover dropdown-bottom dropdown-end">
+                            <div tabIndex={0} role="button" className="">{t("Categories")}</div>
+                            <ul tabIndex={0} className="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 shadow">
+                                <li><Link to={`/category/${t("Sports")}`}>{t("Sports")}</Link></li>
+                                <li><Link to={`/category/${t("Business")}`}>{t("Business")}</Link></li>
+                                <li><Link to={`/category/${t("Entertainment")}`}>{t("Entertainment")}</Link></li>
+                                <li><Link to={`/category/${t("LifeandLiving")}`}>{t("LifeandLiving")}</Link></li>
+                                <li><Link to={`/category/${t("Youth")}`}>{t("Youth")}</Link></li>
+                                <li><Link to={`/category/${t("Tech")}`}>{t("Tech")}</Link></li>
+                                <li><Link to={`/category/${t("Multimedia")}`}>{t("Multimedia")}</Link></li>
+                                <li><Link to={`/category/${t("Politics")}`}>{t("Politics")}</Link></li>
+                            </ul>
+                        </div>
                     </li>
                     <li><Link to="/latestnews">{t("LatestNews")}</Link></li>
                     <li><Link to="/breakingnews">{t("BreakingNews")}</Link></li>
@@ -124,11 +125,12 @@ const Navbar = () => {
                 </div>
             </div>
             {/* headline */}
-            <div className="text-xl font-semibold flex items-center">
-                <div className="py-5 px-8 w-4/12 text-white bg-green-500">
-                    <p>{t("headlines")}</p>
+            <div className="text-base lg:text-xl font-semibold flex items-center">
+                <div className="py-4 lg:py-5 px-2 w-1/6 text-white bg-green-400 flex items-center gap-3 justify-center">
+                    <LuAlertCircle className="text-3xl" />
+                    {t("headlines")}
                 </div>
-                <div className="py-4 bg-base-300">
+                <div className="py-4 w-5/6 bg-base-300">
                     <marquee behavior="" direction="left">
                         {t("headline")}
                     </marquee>

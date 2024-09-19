@@ -13,6 +13,7 @@ import n11 from "../Images/n11.jpg";
 import n12 from "../Images/n12.jpeg";
 import n13 from "../Images/n13.jpg";
 import n14 from "../Images/n14.png";
+import { Link } from "react-router-dom";
 const Banner = () => {
     const {t} = useTranslation();
     return (
@@ -23,7 +24,7 @@ const Banner = () => {
                 <img src={n1} className="h-[500px] w-full object-cover object-center" />
                 <p className="text-base text-gray-500 text-justify">
                 {t("n1shortdes")}
-                <button className="text-blue-500 pl-2 font-bold">Read More</button>
+                <Link to="/latestnews" className="text-blue-500 pl-2 font-bold">Read More</Link>
                 </p>
            </section>
            {/* feature news */}
@@ -117,7 +118,7 @@ const Banner = () => {
                 <img src={n14} className="h-[500px] w-full object-cover object-center" />
                 <p className="text-base text-gray-500 text-justify">
                 {t("n14shortdes")}
-                <button className="text-blue-500 pl-2 font-bold">Read More</button>
+                <Link to="/latestnews" className="text-blue-500 pl-2 font-bold">Read More</Link>
                 </p>
            </section>
         </div>
